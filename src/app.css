@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Styles personnalisés globaux */
+@layer base {
+  body {
+    font-family: system-ui, sans-serif;
+    color: #1f2937;
+  }
+}
+
