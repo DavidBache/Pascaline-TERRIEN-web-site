@@ -7,7 +7,8 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''"
+		"prepare": "svelte-kit sync || echo ''",
+		"generate-covers": "node scripts/generate-thumbnails.js"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^7.0.0",
@@ -21,6 +22,7 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
-		"@tailwindcss/vite": "^4.1.18"
+		"@tailwindcss/vite": "^4.1.18",
+		"pdf-to-png-converter": "^3.11.0"
 	}
 }
