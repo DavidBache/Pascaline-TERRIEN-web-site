@@ -1,6 +1,6 @@
 <script>
   // Tu pourras mettre une vraie photo plus tard
-  const photoUrl = null; // ou '/images/pascaline-terrien.jpg'
+  const photoUrl = "/images/pascaline-terrien.jpeg"; // ou '/images/pascaline-terrien.jpg'
 </script>
 
 <svelte:head>
@@ -139,7 +139,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Publication de [Titre]. Création au [Nom du théâtre].
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tenetur placeat. Eaque explicabo, assumenda natus reiciendis sunt aliquam ipsa corrupti.
           </p>
         </div>
       </div>
@@ -150,7 +150,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Résidence d'écriture. Début du travail sur [Projet].
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis aperiam itaque qui! Labore incidunt non soluta unde itaque facilis voluptatum!
           </p>
         </div>
       </div>
@@ -161,7 +161,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Sélection au Festival [Nom]. Plusieurs représentations à travers la France.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero doloribus modi officiis, aut assumenda ex quia. Culpa non labore voluptatibus.
           </p>
         </div>
       </div>
@@ -172,7 +172,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Première pièce publiée : [Titre]. Début de la reconnaissance.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam perspiciatis sunt repellendus saepe consequatur excepturi ratione fugiat rerum quae.
           </p>
         </div>
       </div>
