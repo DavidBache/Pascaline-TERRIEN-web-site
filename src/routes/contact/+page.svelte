@@ -1,29 +1,6 @@
 <script>
-  let formData = {
-    nom: '',
-    email: '',
-    sujet: '',
-    message: ''
-  };
-
   let submitStatus = null; // 'success' | 'error' | null
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    // Pour l'instant, on simule l'envoi
-    // Plus tard, on connectera à un vrai backend ou service d'email
-    console.log('Formulaire soumis:', formData);
-
-    // Simulation d'envoi réussi
-    submitStatus = 'success';
-
-    // Réinitialiser le formulaire après 3 secondes
-    setTimeout(() => {
-      submitStatus = null;
-      formData = { nom: '', email: '', sujet: '', message: '' };
-    }, 3000);
-  }
+  let isSubmitting = false;
 </script>
 
 <svelte:head>
@@ -71,53 +48,63 @@
             </a>
           </div>
 
-          <!-- Réseaux sociaux -->
+          <!-- Facebook -->
           <div class="mb-8">
-            <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
+            <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
               Réseaux sociaux
             </h3>
-            <div class="flex flex-col gap-3">
-              <!-- Facebook -->
-              <a 
-                href="https://www.facebook.com/share/17v97BCvVi/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center gap-3 group"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-                <span class="font-medium">Facebook</span>
-              </a>
-            </div>
+            <a 
+              href="https://www.facebook.com/share/17v97BCvVi/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-900 hover:text-gray-600 transition-colors inline-flex items-center gap-2"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Page Facebook
+            </a>
           </div>
 
-          <!-- Disponibilité / Note -->
-          <div class="p-4 bg-gray-50 rounded-lg">
-            <p class="text-sm text-gray-600">
-              💡 <strong>Réponse sous 48h</strong><br>
-              Je réponds généralement dans les 48 heures ouvrées.
-            </p>
-          </div>
+        </div>
+
+        <!-- Info supplémentaire -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-gray-900 mb-2">💡 Temps de réponse</h3>
+          <p class="text-sm text-gray-600">
+            Je réponds généralement sous 48h. Pour les demandes urgentes, privilégiez l'email.
+          </p>
         </div>
       </div>
 
-      <!-- Formulaire de contact -->
+      <!-- Formulaire -->
       <div class="lg:col-span-2">
-        <form on:submit={handleSubmit} class="space-y-6">
+        <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">
+          Envoyez-moi un message
+        </h2>
+
+        <form 
+          action="https://formsubmit.co/davidbache@orange.fr" 
+          method="POST"
+          class="space-y-6"
+        >
+          <!-- Configuration FormSubmit (champs cachés) -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="http://localhost:5173/contact/success">
+          <input type="hidden" name="_subject" value="Nouveau message depuis pascalineterrien.fr">
+          <input type="hidden" name="_template" value="box">
 
           <!-- Nom -->
           <div>
             <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">
-              Nom complet *
+              Nom *
             </label>
             <input 
               type="text" 
               id="nom"
-              bind:value={formData.nom}
+              name="nom"
               required
-              placeholder="Jean Dupont"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
             />
           </div>
 
@@ -129,10 +116,9 @@
             <input 
               type="email" 
               id="email"
-              bind:value={formData.email}
+              name="email"
               required
-              placeholder="jean.dupont@exemple.fr"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
             />
           </div>
 
@@ -144,10 +130,9 @@
             <input 
               type="text" 
               id="sujet"
-              bind:value={formData.sujet}
+              name="sujet"
               required
-              placeholder="Projet de collaboration, demande d'information..."
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
             />
           </div>
 
@@ -158,41 +143,12 @@
             </label>
             <textarea 
               id="message"
-              bind:value={formData.message}
+              name="message"
               required
               rows="6"
-              placeholder="Décrivez votre demande ou votre projet..."
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent resize-none"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 resize-none"
             ></textarea>
-            <p class="mt-1 text-sm text-gray-500">
-              Minimum 10 caractères
-            </p>
           </div>
-
-          <!-- Message de confirmation -->
-          {#if submitStatus === 'success'}
-            <div class="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 flex items-start gap-3">
-              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-              </svg>
-              <div>
-                <p class="font-medium">Message envoyé avec succès !</p>
-                <p class="text-sm mt-1">Je vous répondrai dans les plus brefs délais.</p>
-              </div>
-            </div>
-          {/if}
-
-          {#if submitStatus === 'error'}
-            <div class="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 flex items-start gap-3">
-              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
-              </svg>
-              <div>
-                <p class="font-medium">Une erreur est survenue</p>
-                <p class="text-sm mt-1">Veuillez réessayer ou m'écrire directement à terrien.pasc@gmail.com</p>
-              </div>
-            </div>
-          {/if}
 
           <!-- Bouton d'envoi -->
           <button 
@@ -213,7 +169,7 @@
   </div>
 </section>
 
-<!-- Section FAQ / Raisons de contact (optionnel) -->
+<!-- Section FAQ / Raisons de contact -->
 <section class="py-16 bg-gray-50">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">
