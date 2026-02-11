@@ -7,16 +7,14 @@ export const pieces = [
     titre: 'La coloc du 5ème étage',
     genre: 'Comédie',
     annee: 2022,
-    duree: '1h30',
-    distribution: '4 adultes (2F / 2H)',
-    resume: 'Quatre colocataires, deux de sexe féminin et deux de sexe masculin, se partagent un appartement parisien. Leur cohabitation s\'avère difficile et ils décident de mettre au point un règlement censé faciliter leurs rapports.',
-    synopsisComplet: `Quatre colocataires, deux de sexe féminin et deux de sexe masculin, se partagent un appartement parisien. Ils forment deux couples qui ont pu vivre cette cohabitation jusqu'à présent. Mais les choses se compliquent lorsqu'ils se retrouvent tous célibataires.
-
-Leur cohabitation s'avère difficile et ils décident de mettre au point un règlement censé faciliter leurs rapports. Ce règlement stipule notamment qu'aucun des colocataires ne pourra ramener de conquête à l'appartement. Seulement voilà, une fois la règle établie, chacun d'eux va la transgresser...`,
+    duree: '1h40',
+    distribution: '3H 6Fe / 4H 6Fe',
+    synopsisComplet: `C'est la semaine de Noël, pour aider son ami d'enfance Edouard à payer ses dettes et sortir de sa déprime, Tony, grand styliste parisien, loue les cinq chambres de ce dernier à son insu. Alors qu'il y avait déjà la concierge envahissante et la voisine pas commode, vont débarquer des locataires au tempérament bien trempé!
+Tout ce petit monde va chambouler la petite vie tranquille d'Edouard et un incident le soir du réveillon va semer la zizanie. Edouard pourra-t-il supporter autant d'agitations ?`,
     extrait: '',
     pdfUrl: '/pieces/piece-1.pdf',
     imageCover: '/images/covers/piece-1.jpg',
-    themes: ['Cohabitation', 'Relations amoureuses', 'Humour'],
+    themes: ['Société'],
     distinctions: []
   },
   {
@@ -25,16 +23,13 @@ Leur cohabitation s'avère difficile et ils décident de mettre au point un règ
     titre: 'Ça reste entre nous !',
     genre: 'Comédie',
     annee: 2022,
-    duree: '1h30',
-    distribution: '3 adultes (2F / 1H)',
-    resume: 'Deux amies proches depuis toujours décident de partager le même homme. Un pacte les unit : confidences et transparence totale.',
-    synopsisComplet: `Deux amies, proches depuis toujours, se retrouvent amoureuses du même homme. Ne voulant pas sacrifier leur amitié à cause d'un homme, elles décident de le partager. 
-
-Un pacte les unit : confidences et transparence totale. Mais il est des confidences que l'on préfère garder pour soi et des vérités que l'on préfère taire... Jusqu'au jour où...`,
+    duree: '1h45',
+    distribution: '	4H 6Fe / 4H 7Fe / 4H 8Fe / 5H 5Fe / 5H 6Fe / 5H 7Fe',
+    synopsisComplet: `Liliane en a marre, ça fait des mois que son mari Patrick, le maire de leur petite commune, ne fait plus attention à elle et passe tout son temps à la mairie. Son désarroi augmente de plus belle quand Patrick passe à côté de la promesse qu'il lui avait faite: l'emmener aux Seychelles pour ses 50 ans. Là, c'est la goutte d'eau qui fait déborder le vase! Alors avec ses trois copines elles montent une arnaque pour avoir suffisamment d'argent et partir toutes les quatre au soleil. Mais voilà le plan ne va pas se dérouler comme prévu. Mais alors pas du tout!`,
     extrait: '',
     pdfUrl: '/pieces/piece-2.pdf',
     imageCover: '/images/covers/piece-2.jpg',
-    themes: ['Amitié', 'Triangle amoureux', 'Secrets'],
+    themes: ['Amitié', 'Complot', 'Kidnapping'],
     distinctions: []
   },
   {
@@ -42,17 +37,14 @@ Un pacte les unit : confidences et transparence totale. Mais il est des confiden
     slug: 'a-pile-ou-face',
     titre: 'À pile ou face !',
     genre: 'Comédie',
-    annee: 2017,
+    annee: 2022,
     duree: '1h30',
-    distribution: '6 adultes (3F / 3H)',
-    resume: 'Trois couples d\'amis se retrouvent le soir du 31 décembre pour fêter la nouvelle année ensemble. Au cours de la soirée, ils décident de jouer à un jeu : tout appel ou message reçu devra être partagé avec les autres convives.',
-    synopsisComplet: `Trois couples d'amis se retrouvent le soir du 31 décembre pour fêter la nouvelle année ensemble. Au cours de la soirée, ils décident de jouer à un jeu : tout appel ou message reçu devra être partagé avec les autres convives.
-
-Ce qui ne devait être qu'un jeu anodin va rapidement tourner au cauchemar. En effet, pas un seul d'entre eux ne sortira indemne de cette soirée qui s'annonce des plus mouvementées. Secrets, non-dits et mensonges vont peu à peu faire surface. Telle est la règle du jeu. Personne ne pourra y échapper...`,
+    distribution: '3H 5Fe/ 4H 4Fe / 4H 6Fe / 5H 5Fe',
+    synopsisComplet: `Est-il bon de tout se dire ? Car quand une bande d'amis de 30 ans se retrouve pour leur week-end annuel, et que l'atmosphère est déjà bien tendue, mieux vaut-il jouer au "jeu de la vérité", au risque de tout faire voler en éclat, ou à "vendredi tout est permis" pour détendre tout le monde ? "A pile ou face" racontera les deux versions. Mais laquelle à vraiment eu lieu ?`,
     extrait: '',
     pdfUrl: '/pieces/piece-3.pdf',
     imageCover: '/images/covers/piece-3.jpg',
-    themes: ['Couples', 'Secrets', 'Révélations', 'Amitié'],
+    themes: ['Amitié', 'Jeu', 'Vérité'],
     distinctions: []
   },
   {
@@ -60,17 +52,15 @@ Ce qui ne devait être qu'un jeu anodin va rapidement tourner au cauchemar. En e
     slug: 'trop-bon-trop-cons',
     titre: 'Trop bon trop cons !',
     genre: 'Comédie',
-    annee: 2018,
-    duree: '1h30',
-    distribution: '6 adultes (3F / 3H)',
-    resume: 'Trois bonnes actions qui vont avoir des répercussions dans la vie de six personnages. On a beau vouloir bien faire, les choses ne se passent pas toujours comme on l\'avait prévu.',
-    synopsisComplet: `Trois bonnes actions qui vont avoir des répercussions dans la vie de six personnages. On a beau vouloir bien faire, les choses ne se passent pas toujours comme on l'avait prévu.
-
-Une bonne action peut vite se transformer en cauchemar. Telle est la morale de cette pièce qui nous rappelle le proverbe bien connu : "L'enfer est pavé de bonnes intentions" !`,
+    annee: 2022,
+    duree: '1h35',
+    distribution: '3H 6Fe / 4H 5Fe / 4H 6Fe / 5H 5Fe',
+    synopsisComplet: `"Mais pourquoi ils débarquent tous chez nous à chaque fois qu'ils ont un problème ?" Voilà ce que dira Charlotte à son mari Christian. Car après s'être enfin débarrassé du fiston de 28 ans, voilà qu'arrivent leurs mères, "les emmerdeuses" comme ils disent, pour minimum 3 semaines car elles ont chacune un dégât dans leur appartement. Mais comme si ça ne suffisait pas vont s'incruster aussi la petite soeur déprimée, la copine en chaleur et le vieux pote d'enfance. Voilà, c'est la tuile, car tout le monde en profite, encore ! Alors ce sera la dernière fois car dès qu'ils auront compris que tout le monde profite d'eux, Charlotte et Christian, avec l'aide de Rosa leur femme de ménage, vont monter une petite vengeance où tous les coups seront permis. Et oui fallait pas abuser ! Trop bons trop cons'
+C'est ce qu'on verra ! Rira bien qui rira le dernier !`,
     extrait: '',
     pdfUrl: '/pieces/piece-4.pdf',
-    imageCover: null,
-    themes: ['Bonnes intentions', 'Quiproquos', 'Humour'],
+    imageCover: '/images/covers/piece-4.jpg',
+    themes: ['Amitié', 'Famille', 'Vengeance'],
     distinctions: []
   },
   {
@@ -78,19 +68,14 @@ Une bonne action peut vite se transformer en cauchemar. Telle est la morale de c
     slug: 'panique-a-bord',
     titre: 'Panique à bord !',
     genre: 'Comédie',
-    annee: 2019,
-    duree: '1h30',
-    distribution: '8 adultes',
-    resume: 'Un patron d\'une entreprise et son associée organisent une croisière pour récompenser leurs meilleurs employés. Cette croisière devait être un moment de détente et de convivialité, mais elle va se transformer en véritable cauchemar.',
-    synopsisComplet: `Un patron d'une entreprise et son associée organisent une croisière pour récompenser leurs meilleurs employés. Cette croisière devait être un moment de détente et de convivialité, mais elle va se transformer en véritable cauchemar.
-
-En effet, le paquebot va faire naufrage. Les huit passagers vont alors devoir s'entasser dans un canot de sauvetage. Très vite, ils vont se rendre compte qu'ils sont trop nombreux à bord et que le canot va couler s'ils ne se débarrassent pas d'au moins deux passagers.
-
-La question est : qui va-t-on sacrifier ? Dès lors, chacun va tenter de se justifier et de prouver qu'il mérite de vivre plus qu'un autre !`,
+    annee: 2023,
+    duree: '1h35',
+    distribution: '2H 7Fe / 2H 8Fe / 3H 6Fe / 3H 7Fe / 4H 5Fe / 4H 6Fe / 5H 5Fe',
+    synopsisComplet: `Rassemblez sur une péniche des stagiaires, une formatrice et son assistant, pour un stage en développement personnel. Super, me direz vous ! Sauf que quand certains ne sont pas ceux qu'ils prétendent être et que ça vire en... prise d'otages, ce n'est plus pareil ! Ce qui est sûr, c'est que ça va vite être la panique à bord !`,
     extrait: '',
     pdfUrl: '/pieces/piece-5.pdf',
-    imageCover: null,
-    themes: ['Survie', 'Dilemme moral', 'Entreprise', 'Huis clos'],
+    imageCover: '/images/covers/piece-5.jpg',
+    themes: ['Communication', 'Développement', 'Otage'],
     distinctions: []
   },
   {
@@ -98,79 +83,59 @@ La question est : qui va-t-on sacrifier ? Dès lors, chacun va tenter de se just
     slug: 'cest-qui-qui-porte-la-culotte',
     titre: "C'est qui ?... qui porte la culotte !",
     genre: 'Comédie',
-    annee: 2020,
-    duree: '1h30',
-    distribution: '4 adultes (2F / 2H) + Figurants',
-    resume: 'C\'est l\'été et un jeune couple s\'installe pour deux semaines dans une maison de campagne. Leur séjour devait être reposant, mais l\'arrivée impromptue de leurs beaux-parents respectifs va bouleverser leurs projets.',
-    synopsisComplet: `C'est l'été et un jeune couple s'installe pour deux semaines dans une maison de campagne. Leur séjour devait être reposant, mais l'arrivée impromptue de leurs beaux-parents respectifs va bouleverser leurs projets.
-
-En effet, au sein de chacun de ces deux couples, la question se pose : qui porte la culotte ? Et lorsque les quatre protagonistes se retrouvent sous le même toit, ils vont tenter par tous les moyens de prouver qu'ils ont le pouvoir au sein de leur couple respectif. Les stratagèmes et coups bas ne manqueront pas pour y parvenir !`,
+    annee: 2023,
+    duree: '1h35',
+    distribution: '4H 5Fe / 4H 6Fe',
+    synopsisComplet: `Qui c'est qui va se retrouver en slibard léopard? C'est Bernard !Et oui, alors qu'il pensait fêter tranquillement ses 65 ans en famille, Bernard va être manipulé à son insu, par sa collaboratrice, sa mère et sa propre femme! Pauvre Bernard! Enfin si n'était pas aussi macho, il n'en serait pas arrivé là! La soirée promet d'être riche en émotions et en rebondissements! Non mais, c'est qui ?... qui porte la culotte !`,
     extrait: '',
     pdfUrl: '/pieces/piece-6.pdf',
-    imageCover: null,
-    themes: ['Couple', 'Beaux-parents', 'Pouvoir', 'Cohabitation'],
+    imageCover: '/images/covers/piece-6.jpg',
+    themes: ['Famille', 'Beaux-Machisme', 'Vengeance'],
     distinctions: []
   },
   {
     id: 7,
     slug: 'mauvaise',
     titre: 'Mauvaise',
-    genre: 'Drame',
-    annee: 2020,
-    duree: '1h20',
-    distribution: '2 adultes (2F)',
-    resume: 'Élisabeth est une mère de famille qui vient se réfugier dans un cabinet de psychologue après avoir commis l\'irréparable. Elle confesse son histoire et livre un témoignage poignant sur la descente aux enfers d\'une mère.',
-    synopsisComplet: `Élisabeth est une mère de famille qui vient se réfugier dans un cabinet de psychologue après avoir commis l'irréparable. Elle confesse son histoire et livre un témoignage poignant sur la descente aux enfers d'une mère.
-
-Cette pièce traite d'un sujet grave et tabou : la maltraitance infantile. Elle dénonce avec justesse et sans complaisance les rouages d'un système qui mène certaines femmes à devenir des mères indignes.
-
-C'est une pièce forte, touchante et bouleversante qui nous rappelle que la violence familiale reste un fléau encore trop présent dans notre société moderne.`,
+    genre: 'Comédie',
+    annee: 2023,
+    duree: '1h30',
+    distribution: '	3H 5Fe/ 4H 4Fe/ 4H 6Fe/ 5H 5Fe',
+    synopsisComplet: `Quand on est mauvaise et qu'on fourre son nez partout, on s'attire parfois les foudres. Josette, fouineuse à ses heures perdues, c'est à dire tout le temps, veut faire chanter le nouveau voisin qu'elle soupçonne d'être un assassin en planque. Rien que ça! Mais elle va être le dindon de sa propre farce. Tout le voisinage va se liguer contre elle, à son insu, et lui filer la trouille de sa vie en faisant un sacré pari! Ah ça, elle s'en souviendra que c'est pas beau de se mêler des affaires des autres! Ou pas!`,
     extrait: '',
     pdfUrl: '/pieces/piece-7.pdf',
-    imageCover: null,
-    themes: ['Maltraitance', 'Maternité', 'Violence familiale', 'Psychologie'],
+    imageCover: '/images/covers/piece-7.jpg',
+    themes: ['Espionnage'],
     distinctions: []
   },
   {
     id: 8,
     slug: 'le-prince-qui-ne-savait-pas-pleurer',
     titre: 'Le prince qui ne savait pas pleurer',
-    genre: 'Jeune public',
+    genre: 'Comédie',
     annee: 2020,
-    duree: '50 min',
-    distribution: '5 adultes (F ou H au choix)',
-    resume: 'Dans un royaume lointain, un Roi ordonne que tous les miroirs du royaume soient brisés. Son fils unique, le Prince, n\'a jamais connu les larmes. Son père tout-puissant veut le protéger de toute tristesse.',
-    synopsisComplet: `Dans un royaume lointain, un Roi ordonne que tous les miroirs du royaume soient brisés. Son fils unique, le Prince, n'a jamais connu les larmes. Son père tout-puissant veut le protéger de toute tristesse.
-
-Mais un jour, le Prince tombe amoureux d'une jeune fille au village. Pour pouvoir l'épouser, il doit apprendre à pleurer. Son père le Roi s'y oppose farouchement.
-
-Une quête initiatique commence alors pour le Prince, qui devra affronter ses peurs et découvrir ses émotions pour conquérir le cœur de celle qu'il aime.
-
-Un conte moderne sur l'importance des émotions et le droit d'être soi-même.`,
+    duree: '30 min',
+    distribution: '2G 10Fi / 3G 9Fi / 4G 8Fi / 2G 9Fi / 3G 8Fi / 4G 7Fi',
+    synopsisComplet: `Une reine, désespérée de la tristesse de son fils, le prince, depuis la mort de son père, fait appel au docteur Foufou pour aider ce dernier. Mais les potions fantasques du docteur vont causer bien des désagréments au prince. Déjà qu'il est tourmenté par ses deux consciences, Ange et Démon, et par les servantes qui se sont mises en tête de le séduire. Le prince parviendra t-il a retrouver le bonheur dans tout ce chaos?`,
     extrait: '',
     pdfUrl: '/pieces/piece-8.pdf',
-    imageCover: null,
-    themes: ['Conte', 'Émotions', 'Amour', 'Quête initiatique'],
+    imageCover: '/images/covers/piece-8.jpg',
+    themes: ['Prince charmant'],
     distinctions: []
   },
   {
     id: 9,
     slug: 'valentine-a-tout-prix',
     titre: 'Valentine à tout prix',
-    genre: 'Comédie romantique',
-    annee: 2021,
+    genre: 'Comédie',
+    annee: 2024,
     duree: '1h30',
-    distribution: '4 adultes (2F / 2H)',
-    resume: 'Afin de prouver à sa famille que sa vie n\'est pas un échec, Valentine décide de louer les services d\'un comédien pour se faire passer pour son fiancé le temps d\'un week-end.',
-    synopsisComplet: `Afin de prouver à sa famille que sa vie n'est pas un échec, Valentine décide de louer les services d'un comédien pour se faire passer pour son fiancé le temps d'un week-end.
-
-Seulement, elle qui pensait avoir tout prévu et tout organisé va vite déchanter. En effet, elle va se retrouver confrontée à des événements qu'elle n'avait pas du tout anticipés.
-
-Entre mensonges, quiproquos et situations rocambolesques, Valentine va devoir faire face et s'adapter. Mais comment va-t-elle s'en sortir ? Réussira-t-elle à maintenir son mensonge jusqu'au bout ?`,
+    distribution: '3H 3Fe/ 3H 4Fe',
+    synopsisComplet: `Comment récupérer son ex ? En voilà une bonne question ! Tout le monde sait que pour Martin, reconquérir Valentine, c'est mort ! Mort ? Non, mais Martin sait qu'il faudra être patient, ingénieux ou manipulateur ! Eh bien ce sera les trois! Valentine à tout prix ? Oui oui c'est bien ça! Martin va tout donner, sans scrupules ! Ne dit-on pas que la fin justifie les moyens ? Pas sûr qu'on soit tous d'accord !`,
     extrait: '',
     pdfUrl: '/pieces/piece-9.pdf',
-    imageCover: null,
-    themes: ['Faux couple', 'Mensonges', 'Famille', 'Comédie romantique'],
+    imageCover: '/images/covers/piece-9.jpg',
+    themes: ['Manipulation'],
     distinctions: []
   },
   {
@@ -178,59 +143,44 @@ Entre mensonges, quiproquos et situations rocambolesques, Valentine va devoir fa
     slug: 'oignons-ou-echalotes',
     titre: 'Oignons ou échalotes ?',
     genre: 'Comédie',
-    annee: 2022,
-    duree: '1h30',
-    distribution: '4 adultes (2F / 2H)',
-    resume: 'Deux couples d\'amis se retrouvent pour dîner. L\'un des deux couples annonce sa séparation. Cette annonce va bouleverser la soirée et remettre en question bien des certitudes.',
-    synopsisComplet: `Deux couples d'amis se retrouvent pour dîner. L'un des deux couples annonce sa séparation. Cette annonce va bouleverser la soirée et remettre en question bien des certitudes.
-
-En effet, cette séparation va avoir des répercussions sur le couple restant qui va alors se questionner sur sa propre relation. Les non-dits vont peu à peu refaire surface et chacun va devoir faire face à ses propres démons.
-
-Une comédie grinçante sur le couple, l'amitié et les apparences qui peuvent parfois être trompeuses.`,
+    annee: 2024,
+    duree: '1h35',
+    distribution: '3H 5Fe',
+    synopsisComplet: `Alors qu'ils s'apprêtent à fêter les 60 ans de Jacqueline en famille, une divergence sur la recette de la ratatouille va engendrer une énorme dispute entre Michel et Ninie. Tandis que tout le monde se marre devant le ridicule de la situation, le ton va monter et gâcher la fête ! Et si cette dispute aux allures anodines cachait en fait un lourd secret de famille ? Mensonges, jalousies, trahisons et manipulations seront les ingrédients de la soirée! Oignons ou échalotes ? Ce qui est sûr, c'est que ça ne va pas mijoter longtemps avant d'exploser !`,
     extrait: '',
     pdfUrl: '/pieces/piece-10.pdf',
-    imageCover: null,
-    themes: ['Couple', 'Séparation', 'Amitié', 'Non-dits'],
+    imageCover: '/images/covers/piece-10.jpg',
+    themes: ['Amour', 'Famille', 'Secret'],
     distinctions: []
   },
   {
     id: 11,
     slug: 'un-pour-tous-et',
     titre: 'Un pour tous et...',
-    genre: 'Comédie policière',
-    annee: 2023,
-    duree: '1h30',
-    distribution: '6 adultes (3F / 3H)',
-    resume: 'Quatre amis d\'enfance se retrouvent dans la maison familiale de l\'un d\'entre eux pour organiser un cambriolage. Mais les choses ne vont pas se passer comme prévu.',
-    synopsisComplet: `Quatre amis d'enfance se retrouvent dans la maison familiale de l'un d'entre eux pour organiser un cambriolage. Le plan semble parfait. Mais les choses ne vont pas se passer comme prévu.
-
-Entre trahisons, rebondissements et coups de théâtre, ce qui devait être un "coup facile" va se transformer en véritable chaos. Chacun a ses propres motivations et ses propres secrets.
-
-Une comédie policière rythmée où les quiproquos s'enchaînent et où personne n'est vraiment ce qu'il prétend être.`,
+    genre: 'Comédie',
+    annee: 2024,
+    duree: '25min',
+    distribution: '5G 5Fi / 4G 6Fi / 3G 7Fi / 2G 8Fi',
+    synopsisComplet: `Des collégiens montent une pièce de théâtre, mais il semblerait que le texte ne plaise pas à tout le monde. Tous se rebellent et chacun y va de sa proposition. Vont-ils réussir à monter un projet collectif ? Rien n'est moins sûr! Entre ceux qui prennent ça à la légère et ceux qui le prennent au sérieux. Un pour tous et...?`,
     extrait: '',
     pdfUrl: '/pieces/piece-11.pdf',
-    imageCover: null,
-    themes: ['Cambriolage', 'Trahison', 'Amitié', 'Suspense'],
+    imageCover: '/images/covers/piece-11.jpg',
+    themes: ['Adolescence', 'Ecologie', 'Famille'],
     distinctions: []
   },
   {
     id: 12,
     slug: 'qui-a-vole-le-blue-moon',
     titre: 'Qui a volé le Blue Moon ?',
-    genre: 'Comédie policière',
-    annee: 2024,
-    duree: '1h40',
-    distribution: '8 adultes',
-    resume: 'Dans un palace de luxe, le célèbre diamant "Blue Moon" a disparu. Huit suspects, huit mobiles, et une enquête pleine de rebondissements pour découvrir le coupable.',
-    synopsisComplet: `Dans un palace de luxe, le célèbre diamant "Blue Moon" a disparu. Huit suspects, huit mobiles, et une enquête pleine de rebondissements pour découvrir le coupable.
-
-Chacun des huit personnages présents ce soir-là avait une raison de voler ce diamant légendaire. Entre alibis fragiles, mensonges et fausses pistes, l'inspecteur chargé de l'enquête va devoir démêler le vrai du faux.
-
-Une comédie policière à l'anglaise avec ses codes : suspects hauts en couleur, dialogues vifs, et un dénouement inattendu qui surprendra jusqu'au bout !`,
+    genre: 'Comédie',
+    annee: 2025,
+    duree: '25min',
+    distribution: '	1G 11Fi / 2G 10Fi / 3G 9Fi',
+    synopsisComplet: `Le Princess part en croisière, mais durant son voyage un célèbre collier, "le Blue Moon" va disparaître. Mme Rose et Lola vont mener l'enquête! Mais si certains passagers n'étaient pas ce qu'ils prétendaient être ? Le ou les voleurs seront-ils démasqués ?`,
     extrait: '',
     pdfUrl: '/pieces/piece-12.pdf',
-    imageCover: null,
-    themes: ['Enquête', 'Vol', 'Suspects', 'Mystère', 'Énigme'],
+    imageCover: '/images/covers/piece-12.jpg',
+    themes: ['Complot', 'Musique', 'Vol'],
     distinctions: []
   }
 ];

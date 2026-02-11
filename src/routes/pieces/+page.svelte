@@ -89,7 +89,7 @@
               </div>
 
               <p class="text-gray-600 mb-4 line-clamp-3">
-                {piece.resume}
+                {piece.synopsisComplet}
               </p>
 
               <!-- Thèmes -->

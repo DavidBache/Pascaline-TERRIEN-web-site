@@ -5,7 +5,7 @@
 
 <svelte:head>
   <title>{piece.titre} - Pascaline Terrien</title>
-  <meta name="description" content={piece.resume} />
+  <meta name="description" content={piece.synopsisComplet} />
 </svelte:head>
 
 <!-- Hero avec image -->
