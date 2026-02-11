@@ -10,14 +10,14 @@
 
   async function handleSubmit(event) {
     event.preventDefault();
-    
+
     // Pour l'instant, on simule l'envoi
-    // Plus tard, on connectera à un vrai backend
+    // Plus tard, on connectera à un vrai backend ou service d'email
     console.log('Formulaire soumis:', formData);
-    
-    // Simulation d'envoi
+
+    // Simulation d'envoi réussi
     submitStatus = 'success';
-    
+
     // Réinitialiser le formulaire après 3 secondes
     setTimeout(() => {
       submitStatus = null;
@@ -28,7 +28,7 @@
 
 <svelte:head>
   <title>Contact - Pascaline Terrien</title>
-  <meta name="description" content="Contactez Pascaline Terrien pour vos projets, questions ou collaborations" />
+  <meta name="description" content="Contactez Pascaline Terrien pour vos projets, questions ou collaborations théâtrales" />
 </svelte:head>
 
 <!-- Hero Section -->
@@ -47,79 +47,80 @@
 <section class="py-16 bg-white">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-      
+
       <!-- Informations de contact -->
       <div class="lg:col-span-1 space-y-8">
         <div>
           <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">
             Informations
           </h2>
-          
+
           <!-- Email -->
-          <div class="mb-6">
+          <div class="mb-8">
             <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
               Email
             </h3>
-            <a href="mailto:contact@pascalineterrien.fr" class="text-gray-900 hover:text-gray-600 transition-colors">
-              contact@pascalineterrien.fr
+            <a 
+              href="mailto:terrien.pasc@gmail.com" 
+              class="text-gray-900 hover:text-gray-600 transition-colors inline-flex items-center gap-2"
+            >
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              terrien.pasc@gmail.com
             </a>
           </div>
-          
+
           <!-- Réseaux sociaux -->
-          <div class="mb-6">
-            <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
+          <div class="mb-8">
+            <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-3">
               Réseaux sociaux
             </h3>
-            <div class="flex gap-4">
-              <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors" aria-label="Twitter">
+            <div class="flex flex-col gap-3">
+              <!-- Facebook -->
+              <a 
+                href="https://www.facebook.com/share/17v97BCvVi/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-blue-600 transition-colors inline-flex items-center gap-3 group"
+              >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
-              </a>
-              <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors" aria-label="LinkedIn">
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
+                <span class="font-medium">Facebook</span>
               </a>
             </div>
           </div>
-          
-          <!-- Agent/Éditeur -->
-          <div>
-            <h3 class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-2">
-              Représentation
-            </h3>
-            <p class="text-gray-700">
-              Pour les demandes professionnelles, merci de contacter :
+
+          <!-- Disponibilité / Note -->
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <p class="text-sm text-gray-600">
+              💡 <strong>Réponse sous 48h</strong><br>
+              Je réponds généralement dans les 48 heures ouvrées.
             </p>
-            <p class="text-gray-900 font-medium mt-2">
-              [Nom de l'agent/éditeur]
-            </p>
-            <a href="mailto:agent@exemple.fr" class="text-gray-600 hover:text-gray-900 transition-colors">
-              agent@exemple.fr
-            </a>
           </div>
         </div>
       </div>
-      
+
       <!-- Formulaire de contact -->
       <div class="lg:col-span-2">
         <form on:submit={handleSubmit} class="space-y-6">
-          
+
           <!-- Nom -->
           <div>
             <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">
-              Nom *
+              Nom complet *
             </label>
             <input 
               type="text" 
               id="nom"
               bind:value={formData.nom}
               required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+              placeholder="Jean Dupont"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
           </div>
-          
+
           <!-- Email -->
           <div>
             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
@@ -130,10 +131,11 @@
               id="email"
               bind:value={formData.email}
               required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+              placeholder="jean.dupont@exemple.fr"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
           </div>
-          
+
           <!-- Sujet -->
           <div>
             <label for="sujet" class="block text-sm font-medium text-gray-700 mb-2">
@@ -144,10 +146,11 @@
               id="sujet"
               bind:value={formData.sujet}
               required
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900"
+              placeholder="Projet de collaboration, demande d'information..."
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
           </div>
-          
+
           <!-- Message -->
           <div>
             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
@@ -158,34 +161,92 @@
               bind:value={formData.message}
               required
               rows="6"
-              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 resize-none"
+              placeholder="Décrivez votre demande ou votre projet..."
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent resize-none"
             ></textarea>
+            <p class="mt-1 text-sm text-gray-500">
+              Minimum 10 caractères
+            </p>
           </div>
-          
+
           <!-- Message de confirmation -->
           {#if submitStatus === 'success'}
-            <div class="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-              ✓ Votre message a été envoyé avec succès !
+            <div class="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-medium">Message envoyé avec succès !</p>
+                <p class="text-sm mt-1">Je vous répondrai dans les plus brefs délais.</p>
+              </div>
             </div>
           {/if}
-          
+
           {#if submitStatus === 'error'}
-            <div class="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-              ✗ Une erreur est survenue. Veuillez réessayer.
+            <div class="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 flex items-start gap-3">
+              <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+              </svg>
+              <div>
+                <p class="font-medium">Une erreur est survenue</p>
+                <p class="text-sm mt-1">Veuillez réessayer ou m'écrire directement à terrien.pasc@gmail.com</p>
+              </div>
             </div>
           {/if}
-          
+
           <!-- Bouton d'envoi -->
           <button 
             type="submit"
-            class="w-full px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-lg"
+            class="w-full px-8 py-4 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-lg shadow-md hover:shadow-lg"
           >
             Envoyer le message
           </button>
-          
+
+          <p class="text-xs text-gray-500 text-center">
+            En envoyant ce formulaire, vous acceptez que vos données soient utilisées pour vous répondre.
+          </p>
+
         </form>
       </div>
-      
+
+    </div>
+  </div>
+</section>
+
+<!-- Section FAQ / Raisons de contact (optionnel) -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">
+      Pourquoi me contacter ?
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Raison 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <div class="text-3xl mb-3">🎭</div>
+        <h3 class="font-bold text-gray-900 mb-2">Monter une pièce</h3>
+        <p class="text-gray-600 text-sm">
+          Vous souhaitez monter l'une de mes pièces avec votre troupe ou compagnie
+        </p>
+      </div>
+
+      <!-- Raison 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <div class="text-3xl mb-3">💬</div>
+        <h3 class="font-bold text-gray-900 mb-2">Collaboration</h3>
+        <p class="text-gray-600 text-sm">
+          Proposer un projet de collaboration ou une commande d'écriture
+        </p>
+      </div>
+
+      <!-- Raison 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-sm">
+        <div class="text-3xl mb-3">❓</div>
+        <h3 class="font-bold text-gray-900 mb-2">Questions</h3>
+        <p class="text-gray-600 text-sm">
+          Poser vos questions sur mes pièces, mon univers ou mon parcours
+        </p>
+      </div>
     </div>
   </div>
 </section>
