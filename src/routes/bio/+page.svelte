@@ -1,6 +1,6 @@
 <script>
   // Tu pourras mettre une vraie photo plus tard
-  const photoUrl = null; // ou '/images/pascaline-terrien.jpg'
+  const photoUrl = "/images/pascaline-terrien.jpeg"; // ou '/images/pascaline-terrien.jpg'
 </script>
 
 <svelte:head>
@@ -63,16 +63,11 @@
           </h2>
           
           <p class="text-gray-700 leading-relaxed mb-6">
-            Pascaline Terrien est autrice de théâtre contemporain. Son écriture explore 
-            les relations humaines, les dynamiques sociales et les questions d'identité 
-            avec une approche sensible et exigeante.
+            Je fais partie d'une troupe de théâtre amateur depuis plus de 10 ans et je viens de commencer l'écriture. Quel plaisir d'imaginer ses propres scénarios. J'adore inventer mes personnages et imaginer la mise en scène en même temps.
           </p>
 
           <p class="text-gray-700 leading-relaxed mb-6">
-            Diplômée de [formation], elle développe depuis [année] une œuvre singulière 
-            qui interroge notre rapport à l'autre, à la famille, à la société. Ses textes, 
-            qui privilégient les voix féminines et explorent la diversité des points de vue, 
-            ont été joués dans de nombreux théâtres en France et à l'étranger.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum necessitatibus, rerum perferendis similique voluptatem facere iure totam dolorem sed cum eos iste natus blanditiis repellat quibusdam delectus voluptate placeat praesentium.
           </p>
 
           <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4 mt-12">
@@ -80,57 +75,19 @@
           </h2>
 
           <p class="text-gray-700 leading-relaxed mb-6">
-            Son théâtre se caractérise par une attention particulière portée à la langue, 
-            aux silences et aux non-dits. Entre réalisme et poésie, ses pièces créent 
-            des espaces où les personnages se révèlent dans leur fragilité et leur complexité.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium obcaecati consequuntur laudantium, dolores culpa totam veniam neque ducimus modi repellendus id. Quisquam unde molestias asperiores neque eum fugit, corrupti facere.
           </p>
 
           <p class="text-gray-700 leading-relaxed mb-6">
-            Ses thématiques récurrentes incluent les liens familiaux, l'émancipation, 
-            les rapports de domination et la transmission. Elle s'intéresse particulièrement 
-            aux destins de femmes, aux parcours de vie qui se croisent et aux histoires 
-            qui se répondent à travers les générations.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione saepe facere quibusdam quod harum unde quisquam. Necessitatibus praesentium quidem natus, nobis laboriosam eos quaerat in culpa officiis mollitia expedita enim?
           </p>
-
-          <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4 mt-12">
-            Distinctions & Résidences
-          </h2>
-
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <span class="text-gray-900 font-bold">🏆</span>
-              <span class="text-gray-700">
-                <strong>2023</strong> - Prix [Nom du Prix] pour [Titre de pièce]
-              </span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-gray-900 font-bold">📍</span>
-              <span class="text-gray-700">
-                <strong>2022</strong> - Résidence d'écriture au [Nom du lieu]
-              </span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-gray-900 font-bold">🎭</span>
-              <span class="text-gray-700">
-                <strong>2021</strong> - Sélection Festival [Nom du festival]
-              </span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-gray-900 font-bold">✍️</span>
-              <span class="text-gray-700">
-                <strong>2020</strong> - Bourse d'écriture [Organisme]
-              </span>
-            </li>
-          </ul>
 
           <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4 mt-12">
             Publications
           </h2>
 
           <p class="text-gray-700 leading-relaxed mb-6">
-            Ses textes sont publiés aux éditions [Nom éditeur]. Plusieurs de ses pièces 
-            sont également disponibles en lecture sur différentes plateformes dédiées 
-            au théâtre contemporain.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi deleniti corrupti temporibus maxime nobis iure eius ea, quam omnis exercitationem, odit, animi neque dolor provident enim repellat illo placeat.
           </p>
 
           <h2 class="text-2xl font-serif font-bold text-gray-900 mb-4 mt-12">
@@ -138,10 +95,7 @@
           </h2>
 
           <p class="text-gray-700 leading-relaxed mb-6">
-            Pascaline Terrien collabore régulièrement avec des metteurs en scène, 
-            des compagnies et des théâtres pour accompagner la création de ses textes. 
-            Elle participe également à des ateliers d'écriture et intervient auprès 
-            de publics variés pour transmettre son art et partager son amour du théâtre.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis corrupti delectus harum dignissimos vel voluptatibus maxime ullam explicabo, facilis ratione magnam cumque doloribus quo rem nam quaerat! Labore, officiis atque.
           </p>
         </div>
 
@@ -185,7 +139,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Publication de [Titre]. Création au [Nom du théâtre].
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tenetur placeat. Eaque explicabo, assumenda natus reiciendis sunt aliquam ipsa corrupti.
           </p>
         </div>
       </div>
@@ -196,7 +150,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Résidence d'écriture. Début du travail sur [Projet].
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis aperiam itaque qui! Labore incidunt non soluta unde itaque facilis voluptatum!
           </p>
         </div>
       </div>
@@ -207,7 +161,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Sélection au Festival [Nom]. Plusieurs représentations à travers la France.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero doloribus modi officiis, aut assumenda ex quia. Culpa non labore voluptatibus.
           </p>
         </div>
       </div>
@@ -218,7 +172,7 @@
         </div>
         <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
           <p class="text-gray-700">
-            Première pièce publiée : [Titre]. Début de la reconnaissance.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam perspiciatis sunt repellendus saepe consequatur excepturi ratione fugiat rerum quae.
           </p>
         </div>
       </div>
