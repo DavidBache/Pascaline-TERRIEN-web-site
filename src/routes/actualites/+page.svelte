@@ -1,41 +1,6 @@
 <script>
-  // Données temporaires - à remplacer par une vraie source de données plus tard
-  const actualites = [
-    {
-      id: 1,
-      date: '2024-01-15',
-      titre: 'Nouvelle création en cours',
-      description: 'Début de l\'écriture d\'une nouvelle pièce explorant les thèmes de la mémoire familiale.',
-      image: null,
-      lien: null
-    },
-    {
-      id: 2,
-      date: '2023-12-10',
-      titre: 'Résidence d\'écriture',
-      description: 'Sélectionnée pour une résidence d\'écriture au Théâtre National.',
-      image: null,
-      lien: null
-    },
-    {
-      id: 3,
-      date: '2023-11-20',
-      titre: 'Prix du jeune auteur',
-      description: 'Nomination au Prix du Jeune Auteur pour la pièce "Les Murmures".',
-      image: null,
-      lien: null
-    },
-    {
-      id: 4,
-      date: '2023-10-05',
-      titre: 'Publication',
-      description: 'Parution de "Les Murmures" aux Éditions Théâtrales.',
-      image: null,
-      lien: null
-    }
-  ];
+  export let data;
 
-  // Fonction pour formater la date
   function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     return new Date(dateString).toLocaleDateString('fr-FR', options);
@@ -62,54 +27,62 @@
 <!-- Liste des actualités -->
 <section class="py-16 bg-white">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="space-y-12">
-      {#each actualites as actu}
-        <article class="border-l-4 border-gray-900 pl-6 hover:border-gray-600 transition-colors">
-          <!-- Date -->
-          <time class="text-sm font-medium text-gray-500 uppercase tracking-wide">
-            {formatDate(actu.date)}
-          </time>
-          
-          <!-- Titre -->
-          <h2 class="text-2xl font-serif font-bold text-gray-900 mt-2 mb-3">
-            {actu.titre}
-          </h2>
-          
-          <!-- Image (si présente) -->
-          {#if actu.image}
-            <div class="mb-4 rounded-lg overflow-hidden">
-              <img 
-                src={actu.image} 
-                alt={actu.titre}
-                class="w-full h-64 object-cover"
-              />
-            </div>
-          {/if}
-          
-          <!-- Description -->
-          <p class="text-gray-700 leading-relaxed mb-4">
-            {actu.description}
-          </p>
-          
-          <!-- Lien (si présent) -->
-          {#if actu.lien}
-            <a 
-              href={actu.lien}
-              class="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
-            >
-              En savoir plus
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          {/if}
-        </article>
-      {/each}
-    </div>
+    
+    {#if data.actualites.length === 0}
+      <p class="text-center text-gray-500">Aucune actualité pour le moment.</p>
+    {:else}
+      <div class="space-y-12">
+        {#each data.actualites as actu}
+          <article class="border-l-4 border-gray-900 pl-6 hover:border-gray-600 transition-colors">
+            <!-- Date -->
+            <time class="text-sm font-medium text-gray-500 uppercase tracking-wide">
+              {formatDate(actu.date)}
+            </time>
+
+            <!-- Titre -->
+            <h2 class="text-2xl font-serif font-bold text-gray-900 mt-2 mb-3">
+              {actu.titre}
+            </h2>
+
+            <!-- Image (si présente) -->
+            {#if actu.image}
+              <div class="mb-4 rounded-lg overflow-hidden">
+                <img 
+                  src={actu.image} 
+                  alt={actu.titre}
+                  class="w-full h-64 object-cover"
+                />
+              </div>
+            {/if}
+
+            <!-- Résumé -->
+            {#if actu.resume}
+              <p class="text-gray-700 leading-relaxed mb-4">
+                {actu.resume}
+              </p>
+            {/if}
+
+            <!-- PDF (si présent) -->
+            {#if actu.pdf}
+              <a 
+                href={actu.pdf}
+                target="_blank"
+                class="inline-flex items-center text-gray-900 font-medium hover:text-gray-600 transition-colors"
+              >
+                📄 Télécharger le PDF
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            {/if}
+          </article>
+        {/each}
+      </div>
+    {/if}
   </div>
 </section>
 
-<!-- CTA Newsletter (optionnel) -->
+<!-- CTA Newsletter -->
 <section class="bg-gray-50 py-16">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl font-serif font-bold text-gray-900 mb-4">

@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main # ou 'dev' si tu veux publier sur dev
+
+# Configuration locale pour tester
+local_backend: true
+
+media_folder: "static/images/actualites"
+public_folder: "/images/actualites"
+
+collections:
+  - name: "actualites"
+    label: "Actualités"
+    folder: "content/actualites"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Date de publication", name: "date", widget: "datetime" }
+      - { 
+          label: "Catégorie", 
+          name: "categorie", 
+          widget: "select", 
+          options: ["Représentation", "Publication", "Autre"] 
+        }
+      - { label: "Image (optionnelle)", name: "image", widget: "image", required: false }
+      - { label: "Résumé court", name: "resume", widget: "text" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      - { label: "Publié", name: "publie", widget: "boolean", default: true }
