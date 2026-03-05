@@ -1,10 +1,12 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
-import { markdown } from 'vite-plugin-markdown';
+import md from 'vite-plugin-svelte-md';
 
 export default defineConfig({
     plugins: [
         sveltekit(),
-        markdown({ mode: 'html' })
+        md()
     ]
 });
+
+
