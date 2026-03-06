@@ -1,6 +1,17 @@
 <script>
-  // Tu pourras mettre une vraie photo plus tard
-  const photoUrl = "/images/pascaline-terrien.jpeg"; // ou '/images/pascaline-terrien.jpg'
+  import { pieces } from '$lib/data/pieces.js';
+
+  const photoUrl = "/images/pascaline-terrien.jpeg";
+
+  // Trie les pièces par année (de la plus récente à la plus ancienne)
+  const piecesByYear = pieces
+    .sort((a, b) => b.annee - a.annee)
+    .reduce((acc, piece) => {
+      const year = piece.annee;
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(piece);
+      return acc;
+    }, {});
 </script>
 
 <svelte:head>
@@ -124,60 +135,72 @@
   </div>
 </section>
 
-<!-- Section Timeline (optionnelle) -->
+<!-- Section Timeline des pièces -->
 <section class="py-16 bg-gray-50">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-serif font-bold text-gray-900 mb-12 text-center">
-      Chronologie
+      Parcours théâtral
     </h2>
-    
+
     <div class="space-y-8">
-      <!-- Années clés -->
-      <div class="flex gap-6">
-        <div class="flex-shrink-0 w-24 text-right">
-          <span class="text-2xl font-bold text-gray-900">2023</span>
-        </div>
-        <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
-          <p class="text-gray-700">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tenetur placeat. Eaque explicabo, assumenda natus reiciendis sunt aliquam ipsa corrupti.
-          </p>
-        </div>
-      </div>
+      {#each Object.entries(piecesByYear) as [year, piecesInYear]}
+        <div class="flex gap-6">
+          <!-- Année -->
+          <div class="flex-shrink-0 w-24 text-right">
+            <span class="text-2xl font-bold text-gray-900">{year}</span>
+          </div>
 
-      <div class="flex gap-6">
-        <div class="flex-shrink-0 w-24 text-right">
-          <span class="text-2xl font-bold text-gray-900">2022</span>
-        </div>
-        <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
-          <p class="text-gray-700">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis aperiam itaque qui! Labore incidunt non soluta unde itaque facilis voluptatum!
-          </p>
-        </div>
-      </div>
+          <!-- Pièces de cette année -->
+          <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8 space-y-6">
+            {#each piecesInYear as piece}
+              <div class="group">
+                <a 
+                  href="/pieces/{piece.slug}"
+                  class="block hover:bg-white rounded-lg p-4 -ml-4 transition-all duration-200"
+                >
+                  <div class="flex items-start gap-3">
+                    <!-- Badge genre -->
+                    <span class="flex-shrink-0 inline-block px-3 py-1 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">
+                      {piece.genre}
+                    </span>
+                    
+                    <!-- Contenu -->
+                    <div class="flex-grow">
+                      <h3 class="text-lg font-bold text-gray-900 group-hover:text-gray-700 transition-colors mb-1">
+                        {piece.titre}
+                      </h3>
+                      
+                      <p class="text-gray-600 text-sm mb-2">
+                        {piece.duree} • Distribution : {piece.distribution}
+                      </p>
+                      
+                      <p class="text-gray-700 text-sm line-clamp-2">
+                        {piece.synopsisComplet.substring(0, 150)}...
+                      </p>
+                    </div>
 
-      <div class="flex gap-6">
-        <div class="flex-shrink-0 w-24 text-right">
-          <span class="text-2xl font-bold text-gray-900">2021</span>
+                    <!-- Flèche -->
+                    <span class="flex-shrink-0 text-gray-400 group-hover:text-gray-700 group-hover:translate-x-1 transition-all">
+                      →
+                    </span>
+                  </div>
+                </a>
+              </div>
+            {/each}
+          </div>
         </div>
-        <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
-          <p class="text-gray-700">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero doloribus modi officiis, aut assumenda ex quia. Culpa non labore voluptatibus.
-          </p>
-        </div>
-      </div>
+      {/each}
+    </div>
 
-      <div class="flex gap-6">
-        <div class="flex-shrink-0 w-24 text-right">
-          <span class="text-2xl font-bold text-gray-900">2020</span>
-        </div>
-        <div class="flex-grow border-l-2 border-gray-300 pl-6 pb-8">
-          <p class="text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam perspiciatis sunt repellendus saepe consequatur excepturi ratione fugiat rerum quae.
-          </p>
-        </div>
-      </div>
-
-      <!-- Tu peux ajouter d'autres années -->
+    <!-- CTA en bas de timeline -->
+    <div class="mt-16 text-center">
+      <a 
+        href="/pieces"
+        class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors font-semibold"
+      >
+        Découvrir toutes les pièces
+      </a>
     </div>
   </div>
 </section>
+
