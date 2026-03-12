@@ -23,6 +23,9 @@
 	},
 	"dependencies": {
 		"@tailwindcss/vite": "^4.1.18",
-		"pdf-to-png-converter": "^3.11.0"
+		"netlify-cms-app": "^2.15.72",
+		"netlify-identity-widget": "^1.9.2",
+		"pdf-to-png-converter": "^3.11.0",
+		"vite-plugin-svelte-md": "^0.4.1"
 	}
 }

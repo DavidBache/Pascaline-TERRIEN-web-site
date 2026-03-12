@@ -1,0 +1,94 @@
+# Backend en mode local qui lit/écrit vraiment les fichiers
+backend:
+  name: git-gateway
+  
+# En dev, utilise le proxy local
+local_backend: true
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pieces"
+    label: "Pièces"
+    folder: "/content/pieces"
+    create: true
+    slug: "{{titre | slugify}}"
+    identifier_field: "titre"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - label: "Slug (ne pas modifier)"
+        name: "slug"
+        widget: "string"
+        hint: "Généré automatiquement depuis le titre"
+        pattern: ['^[a-z0-9-]+$', "Uniquement minuscules, chiffres et tirets"]
+      - { label: "Genre", name: "genre", widget: "select", options: ["Comédie", "Drame", "Thriller", "Comédie dramatique"] }
+      - { label: "Année", name: "annee", widget: "number" }
+      - { label: "Durée", name: "duree", widget: "string" }
+      - { label: "Distribution", name: "distribution", widget: "string" }
+      - { label: "Nombre min de personnages", name: "nbPersonnagesMin", widget: "number" }
+      - { label: "Nombre max de personnages", name: "nbPersonnagesMax", widget: "number" }
+      - label: "Configurations possibles"
+        name: "configurations"
+        widget: "list"
+        field: { label: "Nombre de personnages", name: "config", widget: "number" }
+      
+      - { label: "Synopsis complet", name: "synopsisComplet", widget: "text" }
+      - { label: "Extrait", name: "extrait", widget: "text", required: false }
+      - { label: "PDF URL", name: "pdfUrl", widget: "string", required: false }
+      - { label: "Image de couverture", name: "imageCover", widget: "image", required: false }
+      - label: "Thèmes"
+        name: "themes"
+        widget: "list"
+        field: { label: "Thème", name: "theme", widget: "string" }
+
+
+  - name: "representations"
+    label: "Représentations"
+    folder: "/content/representations"
+    create: true
+    slug: "{{troupe}}-{{ville}}-{{year}}"
+    extension: "md"
+    format: "frontmatter"
+    fields:
+      - { label: "Troupe", name: "troupe", widget: "string" }
+      - label: "Pièce jouée"
+        name: "piece_slug"
+        widget: "relation"
+        collection: "pieces"
+        search_fields: ["titre"]
+        value_field: "{{slug}}"
+        display_fields: ["titre"]
+        required: true  # ← Rend le champ obligatoire
+      - { label: "Ville", name: "ville", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Saison", name: "saison", widget: "string", required: false }
+      - { label: "Affiche", name: "affiche", widget: "image", required: false }
+      - { label: "Commentaire", name: "commentaire", widget: "text", required: false }
+      - { label: "Lien Facebook (URL)", name: "lienFacebookUrl", widget: "string", required: false, hint: "URL simple vers l'événement" }
+      - { label: "Publication intégrée (iframe)", name: "lienFacebook", widget: "text", required: false, hint: "Code iframe de Facebook" }
+      - { label: "Photos", name: "photos", widget: "list", field: { label: "Photo", name: "photo", widget: "image" }, required: false }
+
+
+
+  - name: "actualites"
+    label: "Actualités"
+    folder: "content/actualites"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - {
+          label: "Catégorie",
+          name: "categorie",
+          widget: "select",
+          options: ["Représentation", "Atelier", "Publication", "Résidence", "Prix/Distinction", "Autre"]
+        }
+      - { label: "Résumé", name: "resume", widget: "text", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "PDF", name: "pdf", widget: "file", required: false }
+      - { label: "Publié", name: "publie", widget: "boolean", default: true }
+      - { label: "Contenu", name: "body", widget: "markdown" }
