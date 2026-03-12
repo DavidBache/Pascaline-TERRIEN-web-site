@@ -1,8 +1,7 @@
 <script>
-  import { pieces } from '$lib/data/pieces.js';
-  
-  // Prendre les 3 dernières pièces pour l'accueil
-  const piecesFeatured = pieces.slice(0, 3);
+  let { data } = $props();
+
+  const piecesFeatured = data.pieces;
 </script>
 
 <svelte:head>

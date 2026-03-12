@@ -1,17 +1,15 @@
 <script>
-  import { pieces } from '$lib/data/pieces.js';
+  let { data } = $props();
 
   const photoUrl = "/images/pascaline-terrien.jpeg";
 
-  // Trie les pièces par année (de la plus récente à la plus ancienne)
-  const piecesByYear = pieces
-    .sort((a, b) => b.annee - a.annee)
-    .reduce((acc, piece) => {
-      const year = piece.annee;
-      if (!acc[year]) acc[year] = [];
-      acc[year].push(piece);
-      return acc;
-    }, {});
+  // Grouper les pièces par année (déjà triées par le serveur)
+  const piecesByYear = data.pieces.reduce((acc, piece) => {
+    const year = piece.annee;
+    if (!acc[year]) acc[year] = [];
+    acc[year].push(piece);
+    return acc;
+  }, {});
 </script>
 
 <svelte:head>
