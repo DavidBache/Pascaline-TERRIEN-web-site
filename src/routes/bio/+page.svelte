@@ -59,7 +59,6 @@
               <span class="text-xl">✉️</span>
               <span class="text-sm font-medium">Contact</span>
             </a>
-            <!-- Tu pourras ajouter d'autres liens plus tard -->
           </div>
         </div>
       </div>
@@ -201,4 +200,3 @@
     </div>
   </div>
 </section>
-
