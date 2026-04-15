@@ -9,8 +9,6 @@ export async function load() {
             import: 'default'
         });
 
-        console.log('Modules trouvés:', Object.keys(modules));
-
         const actualites = Object.entries(modules).map(([path, content]) => {
             const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---/;
             const match = content.match(frontmatterRegex);

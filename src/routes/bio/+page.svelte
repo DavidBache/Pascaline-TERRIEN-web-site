@@ -1,7 +1,7 @@
 <script>
   let { data } = $props();
 
-  const photoUrl = "/images/pascaline-terrien.jpeg";
+  const photoUrl = "/images/Pascaline3.jpeg";
 
   // Grouper les pièces par année (déjà triées par le serveur)
   const piecesByYear = data.pieces.reduce((acc, piece) => {
@@ -41,7 +41,7 @@
               <img 
                 src={photoUrl} 
                 alt="Pascaline Terrien"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover object-top"
               />
             {:else}
               <div class="w-full h-full flex items-center justify-center text-gray-400">

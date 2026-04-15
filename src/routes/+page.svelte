@@ -1,4 +1,6 @@
 <script>
+  import PieceCard from '$lib/components/PieceCard.svelte';
+
   let { data } = $props();
 
   const piecesFeatured = data.pieces;
@@ -63,48 +65,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {#each piecesFeatured as piece}
-        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-          <!-- Image -->
-          <div class="aspect-[4/3] bg-gray-200">
-            {#if piece.imageCover}
-              <img 
-                src={piece.imageCover} 
-                alt={piece.titre}
-                class="w-full h-full object-cover"
-              />
-            {:else}
-              <div class="w-full h-full flex items-center justify-center text-gray-400">
-                <span class="text-6xl">🎭</span>
-              </div>
-            {/if}
-          </div>
-
-          <!-- Contenu -->
-          <div class="p-6">
-            <div class="flex items-center gap-2 text-sm text-gray-500 mb-2">
-              <span class="bg-gray-100 px-3 py-1 rounded-full">{piece.genre}</span>
-              <span>{piece.annee}</span>
-            </div>
-            
-            <h3 class="text-xl font-serif font-bold text-gray-900 mb-3">
-              {piece.titre}
-            </h3>
-            
-            <p class="text-gray-600 mb-4 line-clamp-3">
-              {piece.synopsisComplet}
-            </p>
-
-            <div class="flex items-center justify-between">
-              <span class="text-sm text-gray-500">{piece.duree}</span>
-              <a 
-                href="/pieces/{piece.slug}" 
-                class="text-gray-900 font-semibold hover:underline"
-              >
-                En savoir plus →
-              </a>
-            </div>
-          </div>
-        </article>
+        <PieceCard {piece} />
       {/each}
     </div>
 
@@ -125,11 +86,12 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Photo -->
       <div class="order-2 md:order-1">
-        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden">
-          <!-- Remplace par la vraie photo -->
-          <div class="w-full h-full flex items-center justify-center text-gray-400">
-            <span class="text-8xl">📸</span>
-          </div>
+        <div class="aspect-[3/4] bg-gray-200 rounded-lg overflow-hidden">
+          <img
+            src="/images/Pascaline3.jpeg"
+            alt="Pascaline Terrien"
+            class="w-full h-full object-cover object-top"
+          />
         </div>
       </div>
 
@@ -178,12 +140,4 @@
   </div>
 </section>
 
-<style>
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-</style>
 

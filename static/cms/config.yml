@@ -99,3 +99,4 @@ collections:
       - { label: "PDF", name: "pdf", widget: "file", required: false }
       - { label: "Publié", name: "publie", widget: "boolean", default: true }
       - { label: "Contenu", name: "body", widget: "markdown" }
+
