@@ -2,6 +2,7 @@
 troupe: Les Montagn'Art
 piece_slug: ca-reste-entre-nous
 ville: La Montagne
-date: 2025-01-25
+annee: 2025
+nbSeances: 6
 saison: "2025"
 ---

@@ -1,5 +1,6 @@
 ---
 titre: "Un pour tous et..."
+categorie: "adulte"
 slug: "un-pour-tous-et"
 genre: "Comédie"
 annee: 2024

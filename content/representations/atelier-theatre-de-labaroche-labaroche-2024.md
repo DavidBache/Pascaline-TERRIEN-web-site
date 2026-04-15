@@ -2,6 +2,7 @@
 troupe: Atelier Théâtre De Labaroche
 piece_slug: a-pile-ou-face
 ville: Labaroche
-date: 2024-11-22
+annee: 2024
+nbSeances: 6
 saison: "2024"
 ---

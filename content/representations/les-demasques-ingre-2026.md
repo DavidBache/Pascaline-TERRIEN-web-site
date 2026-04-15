@@ -2,6 +2,7 @@
 troupe: Les Démasqués
 piece_slug: trop-bon-trop-cons
 ville: Ingré
-date: 2026-01-30
+annee: 2026
+nbSeances: 6
 saison: "2026"
 ---

@@ -2,6 +2,7 @@
 troupe: Les Têtes A Claques De Tatinghem
 piece_slug: cest-qui-qui-porte-la-culotte
 ville: St Martin-Lez-Tatinghem
-date: 2025-01-11
+annee: 2025
+nbSeances: 9
 saison: "2025"
 ---

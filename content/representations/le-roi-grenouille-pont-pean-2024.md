@@ -2,6 +2,7 @@
 troupe: Le Roi Grenouille
 piece_slug: panique-a-bord
 ville: Pont-Péan
-date: 2024-04-07
+annee: 2024
+nbSeances: 4
 saison: "2024"
 ---

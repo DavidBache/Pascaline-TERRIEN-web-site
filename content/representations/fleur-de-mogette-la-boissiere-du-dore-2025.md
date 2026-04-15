@@ -2,6 +2,7 @@
 troupe: Fleur De Mogette
 piece_slug: mauvaise
 ville: La Boissière Du Doré
-date: 2025-03-15
+annee: 2025
+nbSeances: 7
 saison: "2025"
 ---

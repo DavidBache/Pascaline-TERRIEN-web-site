@@ -1,6 +1,7 @@
 ---
 titre: "Qui a volé le Blue Moon ?"
 slug: "qui-a-vole-le-blue-moon"
+categorie: "jeune-public"
 genre: "Comédie"
 annee: 2025
 duree: "25min"

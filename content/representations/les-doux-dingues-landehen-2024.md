@@ -2,6 +2,7 @@
 troupe: Les Doux Dingues
 piece_slug: ca-reste-entre-nous
 ville: Landéhen
-date: 2024-01-13
+annee: 2024
+nbSeances: 8
 saison: "2024"
 ---

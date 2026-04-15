@@ -24,6 +24,13 @@ collections:
         widget: "string"
         hint: "Généré automatiquement depuis le titre"
         pattern: ['^[a-z0-9-]+$', "Uniquement minuscules, chiffres et tirets"]
+      - label: "Catégorie"
+        name: "categorie"
+        widget: "select"
+        options:
+          - { label: "Tout public", value: "adulte" }
+          - { label: "Jeune public", value: "jeune-public" }
+        default: "adulte"
       - { label: "Genre", name: "genre", widget: "select", options: ["Comédie", "Drame", "Thriller", "Comédie dramatique"] }
       - { label: "Année", name: "annee", widget: "number" }
       - { label: "Durée", name: "duree", widget: "string" }
@@ -49,7 +56,7 @@ collections:
     label: "Représentations"
     folder: "/content/representations"
     create: true
-    slug: "{{troupe}}-{{ville}}-{{year}}"
+    slug: "{{troupe}}-{{ville}}-{{annee}}"
     extension: "md"
     format: "frontmatter"
     fields:
@@ -61,10 +68,10 @@ collections:
         search_fields: ["titre"]
         value_field: "{{slug}}"
         display_fields: ["titre"]
-        required: true  # ← Rend le champ obligatoire
+        required: true
       - { label: "Ville", name: "ville", widget: "string" }
-      - { label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD" }
-      - { label: "Saison", name: "saison", widget: "string", required: false }
+      - { label: "Année", name: "annee", widget: "number", value_type: "int", min: 2000, max: 2100, hint: "Année de la représentation" }
+      - { label: "Nombre de séances", name: "nbSeances", widget: "number", value_type: "int", min: 1, default: 1, hint: "Nombre total de représentations données par cette troupe" }
       - { label: "Affiche", name: "affiche", widget: "image", required: false }
       - { label: "Commentaire", name: "commentaire", widget: "text", required: false }
       - { label: "Lien Facebook (URL)", name: "lienFacebookUrl", widget: "string", required: false, hint: "URL simple vers l'événement" }

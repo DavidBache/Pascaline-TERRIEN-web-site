@@ -2,6 +2,7 @@
 troupe: L'Etincelle De L'Orbrie
 piece_slug: mauvaise
 ville: L'Orbrie
-date: 2026-02-28
+annee: 2026
+nbSeances: 5
 saison: "2026"
 ---

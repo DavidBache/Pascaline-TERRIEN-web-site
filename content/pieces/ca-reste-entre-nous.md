@@ -1,5 +1,6 @@
 ---
 titre: "Ça reste entre nous !"
+categorie: "adulte"
 slug: "ca-reste-entre-nous"
 genre: "Comédie"
 annee: 2022

@@ -1,6 +1,7 @@
 ---
 titre: "Le prince qui ne savait pas pleurer"
 slug: "le-prince-qui-ne-savait-pas-pleurer"
+categorie: "jeune-public"
 genre: "Comédie"
 annee: 2020
 duree: "30 min"

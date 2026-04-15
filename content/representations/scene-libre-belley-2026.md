@@ -2,6 +2,7 @@
 troupe: Scène Libre
 piece_slug: panique-a-bord
 ville: Belley
-date: 2026-06-27
+annee: 2026
+nbSeances: 2
 saison: "2026"
 ---

@@ -2,6 +2,7 @@
 troupe: La Troupe Des Colocs
 piece_slug: a-pile-ou-face
 ville: Sainte Marie De Beauce
-date: 2024-04-04
+annee: 2024
+nbSeances: 3
 saison: "2024"
 ---

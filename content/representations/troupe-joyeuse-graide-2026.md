@@ -2,6 +2,7 @@
 troupe: Troupe Joyeuse
 piece_slug: ca-reste-entre-nous
 ville: Graide
-date: 2026-03-21
+annee: 2026
+nbSeances: 4
 saison: "2026"
 ---

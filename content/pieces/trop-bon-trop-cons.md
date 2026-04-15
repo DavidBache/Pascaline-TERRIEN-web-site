@@ -1,5 +1,6 @@
 ---
 titre: "Trop bon trop cons !"
+categorie: "adulte"
 slug: "trop-bon-trop-cons"
 genre: "Comédie"
 annee: 2022

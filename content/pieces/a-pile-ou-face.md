@@ -1,5 +1,6 @@
 ---
 titre: "À pile ou face !"
+categorie: "adulte"
 slug: "a-pile-ou-face"
 genre: "Comédie"
 annee: 2022

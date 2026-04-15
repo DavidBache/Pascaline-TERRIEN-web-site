@@ -2,6 +2,7 @@
 troupe: Les Ateliers Du Baluchon
 piece_slug: a-pile-ou-face
 ville: Niort
-date: 2026-03-20
+annee: 2026
+nbSeances: 5
 saison: "2026"
 ---

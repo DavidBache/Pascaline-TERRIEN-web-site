@@ -1,6 +1,7 @@
 ---
 titre: "Oignons ou échalotes ?"
 slug: "oignons-ou-echalotes"
+categorie: "jeune-public"
 genre: "Comédie"
 annee: 2024
 duree: "1h35"

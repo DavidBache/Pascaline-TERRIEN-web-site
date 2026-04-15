@@ -1,5 +1,6 @@
 ---
 titre: "La coloc du 5ème étage"
+categorie: "adulte"
 slug: "la-coloc-du-5eme-etage"
 genre: "Comédie"
 annee: 2022

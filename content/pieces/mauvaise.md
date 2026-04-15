@@ -1,5 +1,6 @@
 ---
 titre: "Mauvaise"
+categorie: "adulte"
 slug: "mauvaise"
 genre: "Comédie"
 annee: 2023

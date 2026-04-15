@@ -2,6 +2,7 @@
 troupe: USL Théâtre Chassignoles
 piece_slug: la-coloc-du-5eme-etage
 ville: Chassignoles
-date: 2026-03-21
+annee: 2026
+nbSeances: 2
 saison: "2026"
 ---

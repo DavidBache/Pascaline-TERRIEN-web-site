@@ -2,6 +2,7 @@
 troupe: Les Planches De Meximieux
 piece_slug: panique-a-bord
 ville: Meximieux
-date: 2025-11-08
+annee: 2025
+nbSeances: 1
 saison: "2025"
 ---

@@ -128,43 +128,55 @@
      🆕 SECTION REPRÉSENTATIONS
      ======================================== -->
 {#if representations && representations.length > 0}
+  <!-- Calcul du total de séances -->
+  {@const totalSeances = representations.reduce((sum, r) => sum + (r.nbSeances || 1), 0)}
+
   <section class="py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="border-b border-gray-300 pb-4 mb-8">
         <h2 class="text-3xl font-serif font-bold text-gray-900">
-          🎭 Cette pièce a été jouée {representations.length} fois
+          Représentations
         </h2>
+        <p class="text-gray-600 mt-2">
+          <span class="font-semibold text-gray-900">{totalSeances} séance{totalSeances > 1 ? 's' : ''}</span>
+          par
+          <span class="font-semibold text-gray-900">{representations.length} troupe{representations.length > 1 ? 's' : ''}</span>
+        </p>
       </div>
 
-      <div class="space-y-8">
+      <div class="space-y-6">
         {#each representations as rep}
           <div class="bg-white rounded-xl shadow-md p-6 border-l-4 border-gray-900 hover:shadow-lg transition-shadow">
 
             <!-- En-tête -->
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-3">
               <div class="flex-1">
-                <h3 class="text-2xl font-serif font-bold text-gray-900">
+                <h3 class="text-xl font-serif font-bold text-gray-900">
                   {rep.troupe}
                 </h3>
-                <p class="text-gray-600 mt-1 flex items-center gap-2 flex-wrap">
+                <p class="text-gray-600 mt-1 flex items-center gap-2 flex-wrap text-sm">
                   <span>📍 {rep.ville}</span>
                   <span>•</span>
-                  <span>📅 {new Date(rep.date).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                  {#if rep.saison}
-                    <span>•</span>
-                    <span class="text-gray-500">Saison {rep.saison}</span>
-                  {/if}
+                  <span>
+                    {rep.annees.sort().join(', ')}
+                  </span>
                 </p>
               </div>
 
-              {#if rep.affiche}
-                <img 
-                  src={rep.affiche} 
-                  alt="Affiche {rep.troupe}"
-                  class="w-32 h-48 object-cover rounded-lg shadow-md"
-                />
-              {/if}
+              <!-- Badge nombre de séances -->
+              <div class="flex-shrink-0 text-center bg-gray-900 text-white rounded-lg px-4 py-2 min-w-[80px]">
+                <div class="text-2xl font-bold">{rep.nbSeances}</div>
+                <div class="text-xs text-gray-300">séance{rep.nbSeances > 1 ? 's' : ''}</div>
+              </div>
             </div>
+
+            {#if rep.affiche}
+              <img
+                src={rep.affiche}
+                alt="Affiche {rep.troupe}"
+                class="w-24 h-36 object-cover rounded-lg shadow-md mb-4"
+              />
+            {/if}
 
             <!-- Commentaire -->
             {#if rep.commentaire}
@@ -173,25 +185,23 @@
               </blockquote>
             {/if}
 
-            <!-- 🆕 Publication Facebook intégrée -->
+            <!-- Lien / iframe Facebook -->
             {#if rep.lienFacebook}
-              <div class="my-6">
+              <div class="my-4">
                 {#if rep.lienFacebook.includes('<iframe')}
-                  <!-- Iframe Facebook -->
                   <div class="flex justify-center bg-gray-50 p-4 rounded-lg">
                     <div class="w-full max-w-xl">
                       {@html rep.lienFacebook}
                     </div>
                   </div>
                 {:else}
-                  <!-- Lien simple -->
-                  <a 
+                  <a
                     href={rep.lienFacebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors font-medium"
+                    class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors font-medium text-sm"
                   >
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                     Voir sur Facebook
@@ -202,14 +212,14 @@
 
             <!-- Photos -->
             {#if rep.photos && rep.photos.length > 0}
-              <div class="mt-6">
-                <h4 class="text-lg font-semibold text-gray-900 mb-3">📸 Photos du spectacle</h4>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="mt-4">
+                <h4 class="text-sm font-semibold text-gray-900 mb-3">Photos du spectacle</h4>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                   {#each rep.photos as photo}
-                    <img 
-                      src={photo} 
+                    <img
+                      src={photo}
                       alt="Photo du spectacle"
-                      class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
+                      class="w-full h-40 object-cover rounded-lg shadow-md hover:scale-105 transition-transform cursor-pointer"
                     />
                   {/each}
                 </div>

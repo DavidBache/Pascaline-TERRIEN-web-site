@@ -1,5 +1,6 @@
 ---
 titre: "Valentine à tout prix"
+categorie: "adulte"
 slug: "valentine-a-tout-prix"
 genre: "Comédie"
 annee: 2024

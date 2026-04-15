@@ -2,6 +2,7 @@
 troupe: Amicale Laïque De Plessala
 piece_slug: mauvaise
 ville: Plessala
-date: 2026-03-14
+annee: 2026
+nbSeances: 4
 saison: "2026"
 ---

@@ -158,11 +158,48 @@ export async function loadPiece(slug) {
 }
 
 /**
- * Charge toutes les représentations d'une pièce
+ * Charge toutes les représentations d'une pièce, agrégées par troupe.
+ * Chaque entrée représente une troupe avec le total de ses séances et ses années de jeu.
  */
 export async function loadRepresentationsByPiece(pieceSlug) {
   const representations = await loadMarkdownFiles('representations');
-  return representations
-    .filter(r => r.piece_slug === pieceSlug)
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const filtered = representations.filter(r => r.piece_slug === pieceSlug);
+
+  // Agréger par troupe
+  const byTroupe = {};
+  for (const rep of filtered) {
+    const key = rep.troupe;
+    if (!byTroupe[key]) {
+      byTroupe[key] = {
+        troupe: rep.troupe,
+        ville: rep.ville,
+        nbSeances: 0,
+        annees: [],
+        commentaire: null,
+        affiche: null,
+        lienFacebook: null,
+        lienFacebookUrl: null,
+        photos: []
+      };
+    }
+    byTroupe[key].nbSeances += Number(rep.nbSeances) || 1;
+    const annee = rep.annee ? String(rep.annee) : null;
+    if (annee && !byTroupe[key].annees.includes(annee)) {
+      byTroupe[key].annees.push(annee);
+    }
+    // Garder les données enrichies si présentes
+    if (rep.commentaire) byTroupe[key].commentaire = rep.commentaire;
+    if (rep.affiche) byTroupe[key].affiche = rep.affiche;
+    if (rep.lienFacebook) byTroupe[key].lienFacebook = rep.lienFacebook;
+    if (rep.lienFacebookUrl) byTroupe[key].lienFacebookUrl = rep.lienFacebookUrl;
+    if (rep.photos && rep.photos.length) byTroupe[key].photos = rep.photos;
+  }
+
+  // Trier par nombre de séances décroissant, puis par année la plus récente
+  return Object.values(byTroupe).sort((a, b) => {
+    if (b.nbSeances !== a.nbSeances) return b.nbSeances - a.nbSeances;
+    const maxA = Math.max(...a.annees.map(Number));
+    const maxB = Math.max(...b.annees.map(Number));
+    return maxB - maxA;
+  });
 }

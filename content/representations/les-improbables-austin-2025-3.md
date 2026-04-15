@@ -2,6 +2,7 @@
 troupe: Les Improbables
 piece_slug: panique-a-bord
 ville: Austin
-date: 2025-11-16
+annee: 2025
+nbSeances: 1
 saison: "2025"
 ---

@@ -1,5 +1,6 @@
 ---
 titre: "C'est qui ?... qui porte la culotte !"
+categorie: "adulte"
 slug: "cest-qui-qui-porte-la-culotte"
 genre: "Comédie"
 annee: 2023

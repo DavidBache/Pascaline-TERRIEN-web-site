@@ -1,5 +1,6 @@
 ---
 titre: "Panique à bord !"
+categorie: "adulte"
 slug: "panique-a-bord"
 genre: "Comédie"
 annee: 2023
