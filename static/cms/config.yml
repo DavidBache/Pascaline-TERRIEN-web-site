@@ -1,7 +1,10 @@
-# Backend en mode local qui lit/écrit vraiment les fichiers
+# Backend GitHub via proxy OAuth Cloudflare Worker
 backend:
-  name: git-gateway
-  
+  name: github
+  repo: DavidBache/Pascaline-TERRIEN-web-site
+  branch: main
+  base_url: https://REMPLACER_PAR_URL_WORKER.workers.dev
+
 # En dev, utilise le proxy local
 local_backend: true
 
