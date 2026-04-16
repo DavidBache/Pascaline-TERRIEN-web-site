@@ -6,12 +6,7 @@ const config = {
     preprocess: vitePreprocess(),
 
     kit: {
-        adapter: adapter(),
-
-        // Copier le dossier admin tel quel (sans le traiter comme une route)
-        files: {
-            assets: 'static'
-        }
+        adapter: adapter()
     }
 };
 
