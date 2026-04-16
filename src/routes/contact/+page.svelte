@@ -90,7 +90,7 @@
         >
           <!-- Configuration FormSubmit (champs cachés) -->
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="http://localhost:5173/contact/success">
+          <input type="hidden" name="_next" value="https://pascaline-terrien-web-site.pages.dev/contact/success">
           <input type="hidden" name="_subject" value="Nouveau message depuis pascalineterrien.fr">
           <input type="hidden" name="_template" value="box">
 
