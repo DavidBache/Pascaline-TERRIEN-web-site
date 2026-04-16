@@ -3,7 +3,7 @@ backend:
   name: github
   repo: DavidBache/Pascaline-TERRIEN-web-site
   branch: main
-  base_url: https://REMPLACER_PAR_URL_WORKER.workers.dev
+  base_url: https://decap-proxy.david-bache.workers.dev
 
 # En dev, utilise le proxy local
 local_backend: true
